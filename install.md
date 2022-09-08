@@ -27,3 +27,16 @@ This is an installation process of [Arch Linux](https://archlinux.org/) from the
 > ⚠ **The AP6255 WiFi & BT Firmware seems to be buggy:** Based from the several articles found on the internet, the wireless module looks like buggy. This installation guide will not cover fixing the wireless bugs yet but it is planned to fix it some time.
 
 > ℹ **Information:** This assumes that the device network will be connected via **wired connection** as the following steps focuses on **ethernet configuration setup.** [Refer to this guide](https://wiki.archlinux.org/title/Network_configuration/Wireless) for more details about setting up with wireless connection.
+
+### Step 1
+
+##### Enlarge console font size
+    # setfont ter-122n
+
+#### Test internet if it's already working
+    # ping google.com
+
+#### Ensure system clock is accurate
+    # timedatectl set-ntp true
+    # timedatectl set-timezone Asia/Manila
+    # timedatectl status
