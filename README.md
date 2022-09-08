@@ -28,7 +28,7 @@ Below is the partition layout with the 32GB eMMC variant of the ROCK Pi X using 
 | _SWAP_  | 2048M       | mmcblk<em>X</em>p2 | Linux Swap       |
 | /       | _remaining_ | mmcblk<em>X</em>p3 | Linux filesystem |
 
-> ℹ **Information:** mmcblk<em>X</em> might show a different number during live boot. It may be due to _race conditions_. It is **highly advised** to use`lsblk` to check what number it was assigned to.
+> ℹ **Information:** mmcblk<em>X</em> might show a different number during live boot. It may be due to _race conditions_. It is **highly advised** to use `lsblk` to check what number it was assigned to.
 
 Linux swap is _optional_ but **recommended** due to limited amount of available RAM. [According to this guide](https://help.ubuntu.com/community/SwapFaq#How_much_swap_do_I_need.3F), if suspend is only needed, then the _square root_ of RAM is enough (e.g.: **√4GB** is **2GB**. Hence, swap size would be 2GB). But if hibernation is needed, add the size of _square root_ of RAM to the size of RAM (e.g.: **√4GB** is **2GB**. Hence, swap size would be 4GB + 2GB = **6GB**).
 
