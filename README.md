@@ -1,1 +1,2 @@
-# cmu-kiosk-device
+# <div style="text-align: center;">CMU Kiosk Device</div>
+### <div style="text-align: center;">The kiosk’s device specification, operating system installation, configuration, scripts and dotfiles.</div>
