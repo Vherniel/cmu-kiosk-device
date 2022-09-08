@@ -40,3 +40,28 @@ This is an installation process of [Arch Linux](https://archlinux.org/) from the
     # timedatectl set-ntp true
     # timedatectl set-timezone Asia/Manila
     # timedatectl status
+
+### Step 2
+
+#### Manage disks & partitions with ext4
+    # lsblk
+    # cfdisk /dev/mmcblk1
+
+Follow this partition layout for 4GB RAM and 32GB eMMC variant of ROCK Pi X. For other variants with different configurations, the `/boot` and `/` can stay the same but the `SWAP` can vary depending on the availability of RAM and storage.
+
+| Mount   | Size        | Partition          | Partition Type   |
+| ------- | ----------- | ------------------ |----------------- |
+| /boot   | 512M        | mmcblk<em>X</em>p1 | EFI System       |
+| _SWAP_  | 2048M       | mmcblk<em>X</em>p2 | Linux Swap       |
+| /       | _remaining_ | mmcblk<em>X</em>p3 | Linux filesystem |
+
+#### Format partitions
+    # mkfs.fat -n EFI /dev/mmcblk1p1
+    # mkswap /dev/mmcblk1p2
+    # swapon /dev/mmcblk1p2
+    # mkfs.ext4 -L Linux /dev/mmcblk1p3
+
+#### Mount partitions
+    # mount /dev/mmcblk1p3 /mnt
+    # mkdir /mnt/boot
+    # mount /dev/mmcblk1p1 /mnt/boot
