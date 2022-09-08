@@ -16,4 +16,4 @@ Refer to the [ROCK Pi X technical specifications page](https://wiki.radxa.com/Ro
 
 ## 📝 License
 
-Copyright © 2022, [https://vherniellebis.tech](Vherniel Lebis.)<br>This project is [https://github.com/Vherniel/cmu-kiosk-device/LICENSE](MIT) licensed.
+Copyright © 2022, [Vherniel Lebis.](https://vherniellebis.tech)<br>This project is [MIT](https://github.com/Vherniel/cmu-kiosk-device/LICENSE) licensed.
