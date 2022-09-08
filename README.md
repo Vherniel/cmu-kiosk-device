@@ -6,7 +6,7 @@
 
 ### Main Board
 
-CMU Kiosk is powered by [ROCK Pi X.](https://wiki.radxa.com/RockpiX) An x86 Single Board Computer (SBC) by [Radxa.](https://wiki.radxa.com/Special:SpecialContact/)
+CMU Kiosk is powered by [ROCK Pi X](https://wiki.radxa.com/RockpiX). An x86 Single Board Computer (SBC) by [Radxa](https://wiki.radxa.com/Special:SpecialContact/).
 
 Below is the specification table of ROCK Pi X Model B that is being developed.
 
@@ -20,4 +20,4 @@ Refer to the [ROCK Pi X technical specifications page](https://wiki.radxa.com/Ro
 
 ## 📝 License
 
-Copyright © 2022, [Vherniel Lebis.](https://vherniellebis.tech)<br>This project is [MIT](https://github.com/Vherniel/cmu-kiosk-device/LICENSE) licensed.
+Copyright © 2022, [Vherniel Lebis](https://vherniellebis.tech). <br>This project is [MIT](https://github.com/Vherniel/cmu-kiosk-device/LICENSE) licensed.
