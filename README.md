@@ -13,3 +13,7 @@ Below is the specification table of ROCK Pi X Model B that is being developed.
 | Intel Atom® x5-Z8350<br>(4-Cores) | 4GB | 32GB | 40-Pin | USB Type-C PD 2.0<br>Qualcomm® Quick Charge™ 3.0/2.0 |
 
 Refer to the [ROCK Pi X technical specifications page](https://wiki.radxa.com/RockpiX/hardware) for more details.
+
+# 📝 License
+
+Copyright © 2022, [https://vherniellebis.tech](Vherniel Lebis.)<br>This project is [https://github.com/Vherniel/cmu-kiosk-device/LICENSE](MIT) licensed.
