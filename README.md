@@ -18,7 +18,7 @@ Refer to the [ROCK Pi X technical specifications page](https://wiki.radxa.com/Ro
 
 ### Partition Layout
 
-> ⚠ **This section needs a final decision:** It is unclear right now whether suspend is sufficient or hibernation is needed. For more information, [refer to this guide](https://help.ubuntu.com/community/SwapFaq#How_much_swap_do_I_need.3F) about handling swap sizes.
+> ⚠ **This section needs a final decision:** It is unclear right now whether suspend is sufficient enough or hibernation is needed. For more information, [refer to this guide](https://help.ubuntu.com/community/SwapFaq#How_much_swap_do_I_need.3F) about handling swap sizes.
 
 Below is the partition layout with the 32GB eMMC variant of the ROCK Pi X using `cfdisk /dev/mmcblkX`.
 
