@@ -1,8 +1,8 @@
 # <p align="center">CMU Kiosk Device — The Device Specification, Operating System Installation, Configuration, Scripts and dotfiles.</p>
 
-# 💻 Device Specification
+## 💻 Device Specification
 
-## Main Board
+### Main Board
 
 CMU Kiosk is powered by [ROCK Pi X.](https://wiki.radxa.com/RockpiX) An x86 Single Board Computer (SBC) by [Radxa.](https://wiki.radxa.com/Special:SpecialContact/)
 
@@ -14,6 +14,6 @@ Below is the specification table of ROCK Pi X Model B that is being developed.
 
 Refer to the [ROCK Pi X technical specifications page](https://wiki.radxa.com/RockpiX/hardware) for more details.
 
-# 📝 License
+## 📝 License
 
 Copyright © 2022, [https://vherniellebis.tech](Vherniel Lebis.)<br>This project is [https://github.com/Vherniel/cmu-kiosk-device/LICENSE](MIT) licensed.
