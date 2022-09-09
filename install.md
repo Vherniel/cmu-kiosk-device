@@ -2,7 +2,9 @@
 
 _Created on: September 10, 2022_
 
-This is an installation process of [Arch Linux](https://archlinux.org/) from the ground up focusing on ROCK Pi X device while implementing the conceptual model of an kiosk. It is suggested to refer with the [official installation guide](https://wiki.archlinux.org/title/Installation_guide) for more up-to-date steps while also refering this guide for kiosk specific procedures.
+This is an installation process of [Arch Linux](https://archlinux.org/) from the ground up focusing on ROCK Pi X device while implementing the conceptual model of a kiosk. It is suggested to refer with the [official installation guide](https://wiki.archlinux.org/title/Installation_guide) for more up-to-date steps while also refering this guide for kiosk specific procedures.
+
+> 🔲 **TODO:** Diagram of conceptual model of kiosk.
 
 ## 📙 Prerequisites
 
@@ -31,21 +33,29 @@ This is an installation process of [Arch Linux](https://archlinux.org/) from the
 ### Step 1
 
 ##### Enlarge console font size
-    # setfont ter-122n
+```console
+# setfont ter-122n
+```
 
 #### Test internet if it's already working
-    # ping google.com
+```console
+# ping google.com
+```
 
 #### Ensure system clock is accurate
-    # timedatectl set-ntp true
-    # timedatectl set-timezone Asia/Manila
-    # timedatectl status
+```console
+# timedatectl set-ntp true
+# timedatectl set-timezone Asia/Manila
+# timedatectl status
+```
 
 ### Step 2
 
 #### Manage disks & partitions with ext4
-    # lsblk
-    # cfdisk /dev/mmcblk1
+```console
+# lsblk
+# cfdisk /dev/mmcblk1
+```
 
 Follow this partition layout for 4GB RAM and 32GB eMMC variant of ROCK Pi X. For other variants with different configurations, the `/boot` and `/` can stay the same but the `SWAP` can vary depending on the availability of RAM and storage.
 
@@ -56,12 +66,16 @@ Follow this partition layout for 4GB RAM and 32GB eMMC variant of ROCK Pi X. For
 | /       | _remaining_ | mmcblk<em>X</em>p3 | Linux filesystem |
 
 #### Format partitions
-    # mkfs.fat -n EFI /dev/mmcblk1p1
-    # mkswap /dev/mmcblk1p2
-    # swapon /dev/mmcblk1p2
-    # mkfs.ext4 -L Linux /dev/mmcblk1p3
+```console
+# mkfs.fat -n EFI /dev/mmcblk1p1
+# mkswap /dev/mmcblk1p2
+# swapon /dev/mmcblk1p2
+# mkfs.ext4 -L Linux /dev/mmcblk1p3
+```
 
 #### Mount partitions
-    # mount /dev/mmcblk1p3 /mnt
-    # mkdir /mnt/boot
-    # mount /dev/mmcblk1p1 /mnt/boot
+```console
+# mount /dev/mmcblk1p3 /mnt
+# mkdir /mnt/boot
+# mount /dev/mmcblk1p1 /mnt/boot
+```
