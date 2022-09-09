@@ -195,3 +195,32 @@ $ exit
 # umount -R /mnt
 # reboot
 ```
+
+## ⏩ Post-Installation
+
+### Step 1
+
+#### Enable some necessary services
+```console
+$ sudo timedatectl set-ntp true
+$ sudo timedatectl set-timezone Asia/Manila
+$ sudo timedatectl status
+$ sudo systemctl enable --now dhcpcd.service fstrim.timer
+```
+
+### Step 2
+
+#### Install Intel Drivers (for codename: Cherry Trail)
+```console
+$ sudo pacman -S mesa lib32-mesa vulkan-intel lib32-vulkan-intel libva-intel-driver libva-utils xorg-xwayland
+```
+
+### Step 3
+
+#### Install Cage Kiosk Compositor
+```console
+$ sudo pacman -S cage
+$ sudo systemctl enable --now seatd.service
+```
+
+
