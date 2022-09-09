@@ -118,7 +118,7 @@ Follow this partition layout for 4GB RAM and 32GB eMMC variant of ROCK Pi X. For
 ```
 
 #### Configure language
-> To do basic editing and exiting using vim, press <kbd>i</kbd> to go into insert mode. This will allow text editing. When done, to save and exit, press <kbd>Esc</kbd> and then followed by <kbd>:wq</kbd>.
+> ℹ **Information:** To do basic editing and exiting using vim, press <kbd>i</kbd> to go into insert mode. This will allow text editing. When done, to save and exit, press <kbd>Esc</kbd> and then followed by <kbd>:wq</kbd>.
 ```console
 # vim /etc/locale.gen
 ```
