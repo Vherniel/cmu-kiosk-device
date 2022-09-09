@@ -79,3 +79,63 @@ Follow this partition layout for 4GB RAM and 32GB eMMC variant of ROCK Pi X. For
 # mkdir /mnt/boot
 # mount /dev/mmcblk1p1 /mnt/boot
 ```
+
+### Step 3
+
+#### Set latest & nearest synchronized mirrors
+```console
+# reflector --country 'Singapore,Taiwan,Hong Kong,Japan,' --sort rate --save /etc/pacman.d/mirrirlist.bak
+```
+
+#### Combine the latest to old mirrorlist
+```console
+# cd /etc/pacman.d
+# cat mirrorlist >> mirrirlist.bak
+# rm mirrorlist
+# mv mirrirlist.bak mirrorlist
+# cd ~
+```
+
+### Step 4
+
+#### Install Arch Linux base system to /mnt
+```console
+# pacman -Sy
+# pacstrap -i /mnt base base-devel linux linux-firmware ntfs-3g vim git dhcpcd intel-ucode booster
+```
+
+#### Generate fstab & chroot to /mnt
+```console
+# genfstab -U -p /mnt >> /mnt/etc/fstab
+# arch-chroot /mnt
+```
+
+#### Set timezone
+```console
+# ls /usr/share/zoneinfo/
+# ln -sf /usr/share/zoneinfo/Asia/Manila > /etc/localtime
+# hwclock --systohc --utc
+```
+
+#### Configure language
+> To do basic editing and exiting using vim, press <kbd>i</kbd> to go into insert mode. This will allow text editing. When done, to save and exit, press <kbd>Esc</kbd> and then followed by <kbd>:wq</kbd>.
+```console
+# vim /etc/locale.gen
+```
+> _uncomment:_ **en_US.UTF-8 UTF8**
+```console
+# locale-gen
+# echo LANG=en_US.UTF-8 > /etc/locale.conf
+# export LANG=en_US.UTF-8
+```
+
+#### Add multilib repository
+```console
+# vim /etc/pacman.conf
+```
+> _uncomment:_ **[multilib]** and **include = /etc/pacman.d/mirrorlist**
+
+#### Sync and refresh the package database
+```console
+# pacman -Sy
+```
