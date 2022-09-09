@@ -139,3 +139,59 @@ Follow this partition layout for 4GB RAM and 32GB eMMC variant of ROCK Pi X. For
 ```console
 # pacman -Sy
 ```
+
+### Step 5
+
+#### Set hostname
+```console
+# echo kiosk > /etc/hostname
+# vim /etc/hosts
+```
+> Use this [hosts file](./archrootfs/etc/hosts) for reference.
+
+#### Configure dhcpcd for quiet and fast start up initialization
+```console
+# vim /etc/dhcpcd.conf
+```
+> Add [this lines](./archrootfs/etc/dhcpcd.conf) to the end of the file.
+
+### Step 6
+
+#### Set root password and create admin user
+```console
+# passwd
+# useradd -m admin -G wheel -s /bin/bash -c "Admin"
+# passwd admin
+```
+
+#### Allow users in wheel group to do sudo tasks
+```console
+# EDITOR=vim visudo
+```
+> _uncomment:_ **%wheel ALL=(ALL:ALL) ALL**
+
+#### Create XDG compliant user directories
+```console
+# pacman -S xdg-user-dirs
+# su admin
+$ cd ~
+$ xdg-user-dirs-update
+$ exit
+```
+
+### Step 7
+
+#### Configure systemd bootloader with microcode patches
+```console
+# bootctl install
+# blkid | grep mmcblk1p3 > /boot/loader/entries/arch.conf
+# vim /boot/loader/entries/arch.conf
+```
+> Use this [boot entry configuration file](./archrootfs/boot/loader/entries/arch.conf) for reference.
+
+#### Unmount partitions & reboot
+```console
+# exit
+# umount -R /mnt
+# reboot
+```
