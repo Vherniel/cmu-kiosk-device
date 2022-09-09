@@ -223,4 +223,11 @@ $ sudo pacman -S cage
 $ sudo systemctl enable --now seatd.service
 ```
 
+### Step 4
+
+#### Add guest user that is only allowed to cage
+```console
+$ sudo useradd -m guest -G seat -s /bin/bash -c "Guest"
+$ sudo passwd guest
+```
 
