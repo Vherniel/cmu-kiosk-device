@@ -225,7 +225,7 @@ $ sudo systemctl enable --now seatd.service
 
 ### Step 4
 
-#### Add guest user that is only allowed to run Cage
+#### Add guest user which belongs to seat group that allows to run Cage Kiosk Compositor
 ```console
 $ sudo useradd -m guest -G seat -s /bin/bash -c "Guest"
 $ sudo passwd guest
