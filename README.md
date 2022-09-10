@@ -32,8 +32,27 @@ Below is the partition layout with the 32GB eMMC variant of the ROCK Pi X using 
 
 Linux swap is _optional_ but **recommended** due to limited amount of available RAM. [According to this guide](https://help.ubuntu.com/community/SwapFaq#How_much_swap_do_I_need.3F), if _suspend_ is only needed, then the _square root_ of RAM is enough (e.g.: **√4GB** is **2GB**. Hence, swap size would be **2GB**). However, if _hibernation_ is needed, add the size of _square root_ of RAM to the size of RAM (e.g.: **√4GB** is **2GB**. Hence, swap size would be 4GB + 2GB = **6GB**).
 
-<!-- TODO: Small logo -->
+## 🔲 TODO Lists
 
+- [X] Autostart Cage Wayland kiosk compositor with systemd
+- [ ] Autostart local web server
+- [ ] Enable TPM security module
+- [ ] Implement Plymouth
+- [ ] Reduce user privileges
+- [ ] Implement ext4 or btrfs disk compression
+- [ ] Implement printing features
+- [ ] Explore WiFi configurations
+- [ ] Explore networking configurations
+- [ ] Explore schedulers
+- [ ] Explore zram or zswap
+- [ ] Explore and Implement watchdog
+- [ ] Relocate temporary files to tmpfs
+- [ ] Update UEFI/BIOS configurations
+- [ ] Explore and implement caching
+- [ ] Convenient debugging scripts
+- [ ] Convenient install script (low prio)
+
+<!-- TODO: Small logo -->
 
 ## 📝 License
 
