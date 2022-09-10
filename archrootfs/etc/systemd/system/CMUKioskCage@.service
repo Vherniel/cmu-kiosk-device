@@ -32,9 +32,8 @@ OnFailure=plymouth-quit.service
 [Service]
 Type=simple
 # Use the line below for production
-# ExecStart=/usr/bin/cage -r /usr/bin/chromium
 # Add -r flag in cage to rotate the screen
-ExecStart=/usr/bin/cage -d -s /usr/bin/chromium
+ExecStart=/usr/bin/cage -s -d -- /usr/bin/chromium --incognito --no-first-run --no-default-browser-check --disable-translate --kiosk https://www.google.com/
 Restart=always
 User=guest
 # Log guest user with utmp, letting it show up with commands 'w' and
