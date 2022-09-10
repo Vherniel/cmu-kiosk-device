@@ -26,6 +26,9 @@ After=dbus.socket systemd-logind.service
 Conflicts=getty@%i.service
 After=getty@%i.service
 
+# For any reason, make sure plymouth stops.
+OnFailure=plymouth-quit.service
+
 [Service]
 Type=simple
 # Use the line below for production
