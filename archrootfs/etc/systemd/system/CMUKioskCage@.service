@@ -53,6 +53,7 @@ StandardInput=tty-fail
 PAMName=guest
 
 [Install]
-# WantedBy=graphical.target
-Alias=display-manager.service
+WantedBy=graphical.target
+# Since we don't use other display managers, this is not needed.
+# Alias=display-manager.service
 DefaultInstance=tty7
