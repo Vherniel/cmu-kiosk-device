@@ -50,6 +50,7 @@ Linux swap is _optional_ but **recommended** due to limited amount of available 
 - [ ] Update UEFI/BIOS configurations
 - [ ] Explore and implement caching
 - [ ] Convenient debugging scripts
+- [ ] Explore chroot installation for additional security layer (low prio)
 - [ ] Convenient install script (low prio)
 
 <!-- TODO: Small logo -->
